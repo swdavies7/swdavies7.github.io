@@ -20,6 +20,12 @@
 <a id="cli-scraper-post" class="anchor" href="#cli-scraper-post" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CLI Scraper Post</h1>
 
 <p>I decided to make a tennis player rankings gem for this project. After looking at the example gems, I thought that a listing tennis players and their information would make for a good starter gem. Men’s tennis rankings are controlled by the ATP, so I went to the rankings on the ATP website after a google search. The rankings page on the website had the top 100 men’s tennis players listed in order in a table, with a rank and a name on each line. Each name also had a link to that player’s profile page. I realized that I would be able to scrape the rankings page to create players and then use the links to the profile pages to scrape each player’s personal information and current win-loss record. To make it easier to find the html elements I needed, I installed an html selector gadget on Chrome. I set up a Scraper class that is similar to the Student Scraper lab. My gem creates players with name, ranking, and profile url. Then when a player is selected, a profile scraper gets the information about the specific player and adds the attributes to the player. This was useful to see the descriptive information about every player, but I wanted to go one level deeper, so I created a head-to-head method that allows users to look up head-to-head records between players in the top 100. Each player has what I called a profile id in their url, so I used the byteslice method to extract this id. I then merged the current player id with an id of an opponent of the users choosing into a url string. A third scraper method scraped the head-to-head win-loss record between opponents and added this to the player instance. The functionality of the gem currently allows users to list players in the top 100, see personal information about a selected player, and see a head-to-head matchup record between any two players on the list.</p>
+      
+      <video width="320" height="240" controls>
+        <source src="/home/nitrous/website/swdavies7.github.io/images/mens_tennis_rankings video.mp4" type="video/mp4">
+        
+        Your browser does not support the video tag.
+      </video>
 
       <footer class="site-footer">
 
